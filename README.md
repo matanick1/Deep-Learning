@@ -1,62 +1,42 @@
-                                ANALYSIS OF CHARITY FUNDING
+# README
 
-1.	Purpose of the analysis: 
+## Alphabet Soup Charity Model Analysis
 
-    •	Alphabet Soup wants a tool that can help it select which applicants for funding have the best chance of success.
+This project aims to create and evaluate machine learning models to assist Alphabet Soup Charity in making informed decisions regarding funding applications.
 
-2.	Results:
+### Files Included:
 
-    •	Data Preprocessing
+1. `AlphabetSoupCharity.h5` - A trained machine learning model.
+2. `AlphabetSoupCharity_Optimization.h5` - An optimized version of the trained machine learning model.
+3. `google_colab.ipynb` - Jupyter notebook detailing the data preprocessing steps and the process of compiling, training, and evaluating a machine learning model.
+4. `Optimized.ipynb` - Jupyter notebook outlining the same steps as `google_colab.ipynb` but with potential optimizations or variations.
 
-    1.	What variable(s) are the target(s) for your model? 
-    
-        	I used “IS_SUCCESSFUL” as the target variable.
+## File Descriptions:
 
-    2.	What variable(s) are the features for your model? 
-    
-    
-        	APPLICATION_TYPE
+### 1. H5 Files:
 
-        	AFFILIATION
+- **`AlphabetSoupCharity.h5`**: Contains a machine learning model trained on the given dataset.
+- **`AlphabetSoupCharity_Optimization.h5`**: Contains an optimized or alternative version of the machine learning model.
 
-        	CLASSIFICATION
+### 2. Jupyter Notebooks:
 
-        	USE_CASE
+- **`google_colab.ipynb`**: 
+  - **Preprocessing**: Details the steps involved in preparing the data for machine learning.
+  - **Compile, Train and Evaluate the Model**: Describes the model's architecture, training process, and performance evaluation.
+  
+- **`Optimized.ipynb`**: Similar to `google_colab.ipynb` but may include variations or optimizations in the model or preprocessing steps.
 
-        	ORGANIZATION
+## How to Use:
 
-        	STATUS
+1. **Jupyter Notebooks**:
+   - Open either `google_colab.ipynb` or `Optimized.ipynb` in Jupyter Notebook or Jupyter Lab.
+   - Ensure all dependencies, especially required Python packages, are installed.
+   - Run the cells in sequence to understand the model's creation and evaluation process.
 
-        	INCOME_AMT
+2. **H5 Models**:
+   - These files can be loaded using libraries such as TensorFlow or Keras to make predictions or further evaluate and optimize.
 
-        	SPECIAL_CONSIDERATIONS
+## Notes:
 
-        	ASK_AMT
-
-    3.	What variable(s) should be removed from the input data because they are neither targets nor features? 
-
-        	“EIN” and “NAME”
-
-    •	Compiling, Training, and Evaluating the Model
-
-    4.	How many neurons, layers, and activation functions did you select for your neural network model, and why?
-
-        	For the first model, I used 2 hidden layers with 80 and 30 neurons. I chose 80 and 30 because it is roughly twice the number of input features. I used “relu” activation function for the hidden layers and “sigmoid” for the output layer. I used “binary_crossentropy” for the loss function and “adam” for the optimizer.
-
-    5.	Were you able to achieve the target model performance? 
-
-        	No, I got to just over 74%, but never reached 75%.
-
-    6. 	What steps did you take in your attempts to increase model performance?
-
-        	I added a third hidden layer.
-
-        	I changed the neurons in all of the layers to 100, 50, and 25.
-
-        	I reduced the number of epochs to 50.
-
-
-3.	Summary: 
-    1.	The optimized model ended up having a slightly better accuracy than the optimized model. The original model had an accuracy of 72.52% and the optimized model had an accuracy of 72.53%.
-
-    2.	I would use the Keras Tuner library to try to make my model because it provides a streamlined and efficient way to search for the best hyperparameters for my model.
+- Ensure that all files are in the same directory if directly referencing within the notebooks.
+- The models in the H5 files correspond to the processes detailed in the Jupyter notebooks. Depending on the notebook, the models might have different architectures or training parameters.
